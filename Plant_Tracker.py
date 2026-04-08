@@ -2,7 +2,9 @@ import csv
 import uuid
 from datetime import date, datetime, timedelta
 
-# adding a new plant
+
+
+# adding a new plant                 Done by: Abdulla
 def add_plant():
     """Add a new plant to plants.csv"""
 
@@ -74,9 +76,13 @@ def add_plant():
         print(f"Error saving plant: {e}")
 
 
-# =========================
-# RECORD CARE ACTIVITY
-# =========================
+
+
+
+
+
+# RECORD CARE ACTIVITY                 Done by: Yasser
+
 def record_care():
     """Record plant care activity"""
 
@@ -93,7 +99,7 @@ def record_care():
     print("\n=== Record Care Activity ===")
 
     plant_id = input("Enter plant ID: ")
-    activity = input("Activity (Watering/Fertilizing/Repotting/Pruning): ")
+    activity = input("Activity (Watering/Fertilizing/Repotting): ")
     today = date.today().strftime("%Y-%m-%d")
 
     with open('care_log.csv', 'a', newline='') as file:
@@ -123,9 +129,12 @@ def update_last_watered(plant_id, today):
         writer.writerows(rows)
 
 
-# =========================
-# VIEW PLANTS DUE FOR CARE
-# =========================
+
+
+    
+
+# VIEW PLANTS DUE FOR CARE                 Done by: Mahmood
+
 def view_due_plants():
     print("\n=== Plants Due for Watering ===")
 
@@ -143,9 +152,11 @@ def view_due_plants():
                     print(f"{plant['name']} ({plant['location']})")
 
 
-# =========================
-# SEARCH PLANTS
-# =========================
+
+
+
+# SEARCH PLANTS                 Done by: Mahmood
+
 def search_plants():
     print("\n=== Search Plants ===")
     term = input("Enter name or location: ").lower()
@@ -158,9 +169,11 @@ def search_plants():
                 print(plant)
 
 
-# =========================
+
+
+
 # VIEW ALL PLANTS
-# =========================
+
 def view_all_plants():
     print("\n=== All Plants ===")
 
@@ -173,9 +186,9 @@ def view_all_plants():
         print("No plants found.")
 
 
-# =========================
-# MENU
-# =========================
+
+# MENU                 Done by: All the team
+
 def display_menu():
     print("\n=== Plant Care Tracker ===")
     print("1. Add a new plant")
@@ -187,9 +200,9 @@ def display_menu():
     return input("Enter your choice: ")
 
 
-# =========================
-# MAIN LOOP
-# =========================
+
+# MAIN LOOP                 Done by: Mahmood
+
 def main():
     print("Welcome to Plant Care Tracker!")
 
