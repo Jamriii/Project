@@ -46,7 +46,7 @@ def add_plant():
     # Watering
     while True:
         try:
-            frequency = int(input("Enter watering frequency (days): "))
+            frequency = int(input("Enter watering frequency (times per day): "))
             if frequency > 0:
                 break
             print("Enter a positive number.")
